@@ -4,6 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<link rel="icon" type="image/png" sizes="16x16"  href="./img/favicons/favicon-16x16.png">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="../res/fontawesome/css/all.css"/>
+<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" href="style.css">
 	<title>Queen</title>
 </head>
@@ -44,18 +49,46 @@
 					</p>
 					<button class="btn btn-danger btn-lg">Discover our new <span class="text-dark"><b>TOUR</b></span></button>
 				</div>
-				<img class="img-fluid w-30 my-3 d-none d-sm-block rounded" src="img/queen.png" alt="" >
+				<img class="img-fluid w-50 my-3 d-none d-sm-block border border-danger rounded border-3" src="img/queen.png">
 			</div>
 		</div>
 	</section>
+<!-- Music player -->
+<section id="player" class="player text-light lead p-3 border border-3 rounded">
+
+	<audio
+	src="./audio/Queen - Killer Queen (Top Of The Pops, 1974) (64 kbps).mp3" id="audio" 
+	ontimeupdate="updateTime(this)">
+	</audio>
+
+		<div class="control">
+			<div class="row text-center">
+				<div class="col-md">
+					<div class="col-md"></div>
+					<i onclick="playAudio()" class="fas fa-play" id="playbutton"></i></button>
+					
+					<i onclick="pauseAudio()" class="fas fa-pause" id="playbutton"></i>
+				</div>
+				<div class="col-md info">Queen - Killer Queen
+					<div class="bar">
+						<div id="progress"></div>
+					</div>
+				</div>
+				<div class="col-md">
+					<div id="tracktime">00/00</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 <!-- ALBUMS -->
-<section class="p-5">
+<section class="p-5 bg-dark">
 	<div class="container">
 		<div class="row text-center">
 			<div class="col-md">
-				<div class="card bg-dark text-light">
+				<div class="card bg-dark text-light border border-3">
 					<div class="card-body text-center">
-							<img src="./img/Queen_II.jpg" alt="">
+							<img src="./img/Queen_II.jpg" class="border border-3 rounded">
 						<h3 class="card-title mb-3">Queen II</h3>
 						<p class="card-text">
 							Queen II is the second studio album by the British rock band Queen. It was released on 8 March 1974 by EMI Records in the UK and Elektra Records in the US. It was recorded at Trident Studios and Langham 1 Studios, London. It is significant for being the first album to contain elements of the band's signature sound of multi-layered overdubs, vocal harmonies, and varied musical styles.
@@ -65,9 +98,9 @@
 				</div>
 			</div>
 		<div class="col-md">
-			<div class="card bg-secondary text-dark">
+			<div class="card bg-secondary text-dark border border-3 rounded">
 				<div class="card-body text-center">
-					<img src="./img/Queen-News_of_the_World.jpg" alt="">
+					<img src="./img/Queen-News_of_the_World.jpg" class="border border-3 rounded">
 					<h3 class="card-title mb-3">News of the World</h3>
 					<p class="card-text">
 						News of the World is the sixth studio album by the British rock band Queen, released on 28 October 1977 by EMI Records in the United Kingdom and by Elektra Records in the United States. News of the World was the band's second album to be recorded at Sarm and Wessex Sound Studios in London, and engineered by Mike Stone, and was co-produced by the band and Stone.
@@ -77,9 +110,9 @@
 			</div>
 		</div>
 		<div class="col-md">
-			<div class="card bg-dark text-light">
+			<div class="card bg-dark text-light border border-3 rounded">
 				<div class="card-body text-center">
-					<img src="./img/JAZZ.jpg" alt="">
+					<img src="./img/JAZZ.jpg" class="border border-3 rounded">
 					<h3 class="card-title mb-3">Jazz</h3>
 					<p class="card-text">
 						Jazz is the seventh studio album by the British rock band Queen. It was released on 10 November 1978 by EMI Records in the United Kingdom and by Elektra Records in the United States. Produced by Roy Thomas Baker, the album artwork was suggested by Roger Taylor, who previously saw a similar design painted on the Berlin Wall. The album's varying musical styles were alternately praised and criticised. 
@@ -99,7 +132,7 @@
 			<div class="col-md-6 col-lg-3">
 				<div class="card bg-dark">
 					<div class="card-body text-center rounded">
-						<img src="./img/brian-may.jpg" class="w-75 rounded-circle">
+						<img src="./img/brian-may.jpg" class="w-75 rounded-circle border border-3">
 						<h3 class="card-title mb-3 text-light">Brian May</h3>
 						<p class="text-light">
 							Sir Brian Harold May (1947) is an English musician, singer, songwriter and astrophysicist. He achieved worldwide fame as the lead guitarist of the rock band Queen, which he co-founded with singer Freddie Mercury and drummer Roger Taylor. His guitar work and songwriting contributions helped Queen become one of the most successful acts in music history. 
@@ -110,7 +143,7 @@
 			<div class="col-md-6 col-lg-3">
 				<div class="card bg-dark">
 					<div class="card-body text-center rounded">
-						<img src="./img/freddie-mercury.jpg" class="w-75 rounded-circle">
+						<img src="./img/freddie-mercury.jpg" class="w-75 rounded-circle border border-3">
 						<h3 class="card-title mb-3 text-light">Freddie Mercury</h3>
 						<p class="text-light">
 							Freddie Mercury (1946 – 1991) was a British singer and songwriter, who achieved worldwide fame as the lead vocalist of the rock band Queen. Regarded as one of the greatest singers in the history of rock music, he was known for his flamboyant stage persona and four-octave vocal range. Mercury defied the conventions of a rock frontman with his theatrical style, influencing the artistic direction of Queen. 
@@ -121,10 +154,10 @@
 			<div class="col-md-6 col-lg-3">
 				<div class="card bg-dark">
 					<div class="card-body text-center rounded">
-						<img src="./img/john-deacon.jpg" class="w-75 rounded-circle">
+						<img src="./img/john-deacon.jpg" class="w-75 rounded-circle border border-3">
 						<h3 class="card-title mb-3 text-light">John Deacon</h3>
 						<p class="text-light">
-							John Richard Deacon (born 19 August 1951) is an English retired musician, best known for being the bass guitarist for the rock band Queen. He wrote several songs for the group, including Top 10 hits "You're My Best Friend", "Another One Bites the Dust" and "I Want to Break Free"; co-wrote "Under Pressure", "Friends Will Be Friends" and "One Vision"; and he was involved in the band's financial management.  
+							John Richard Deacon (1951) is an English retired musician, best known for being the bass guitarist for the rock band Queen. He wrote several songs for the group, including Top 10 hits "You're My Best Friend", "Another One Bites the Dust" and "I Want to Break Free"; co-wrote "Under Pressure", "Friends Will Be Friends" and "One Vision"; and he was involved in the band's financial management.  
 						</p>
 					</div>
 				</div>
@@ -132,7 +165,7 @@
 			<div class="col-md-6 col-lg-3">
 				<div class="card bg-dark">
 					<div class="card-body text-center rounded">
-						<img src="./img/roger-taylor.jpg" class="w-75 rounded-circle">
+						<img src="./img/roger-taylor.jpg" class="w-75 rounded-circle border border-3">
 						<h3 class="card-title mb-3 text-light">Roger Taylor</h3>
 						<p class="text-light">
 							Roger Meddows Taylor (1949) is an English musician, singer and songwriter. He achieved international fame as the drummer for the rock band Queen. As a drummer, Taylor was recognised early in his career for his unique sound and was voted the eighth-greatest drummer in classic rock music history in a listener poll conducted by Planet Rock in 2005. He was inducted into the Rock and Roll Hall of Fame in 2001 as a member of Queen.  
@@ -143,7 +176,6 @@
 		</div>
 	</div>
 </section>
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
 </body>
 </html>
