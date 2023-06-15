@@ -53,38 +53,91 @@
 			</div>
 		</div>
 	</section>
-<!-- Music player -->
-<section id="player" class="player text-light lead p-3 border border-3 rounded">
-
-	<audio
-	src="./audio/Queen - Killer Queen (Top Of The Pops, 1974) (64 kbps).mp3" id="audio" 
-	ontimeupdate="updateTime(this)">
-	</audio>
-
-		<div class="control">
-			<div class="row text-center">
-				<div class="col-md">
-					<div class="col-md"></div>
-					<i onclick="playAudio()" class="fas fa-play" id="playbutton"></i></button>
-					
-					<i onclick="pauseAudio()" class="fas fa-pause" id="playbutton"></i>
-				</div>
-				<div class="col-md info">Queen - Killer Queen
-					<div class="bar">
-						<div id="progress"></div>
+<!-- Music player 1 -->
+<section class="player text-light lead p-3 border border-secondary border-4 bg-dark">
+	<div class="mb-5">
+		<h1 class="text-center text-light">Some of the top charts</h1>
+	</div>
+	<div class="container-md border rounded">
+		<audio
+		src="./audio/Queen - Killer Queen (Top Of The Pops, 1974) (64 kbps).mp3" class="audio" id="audio" ontimeupdate="update_time(this.currentTime, this.duration, 0);">
+		</audio>
+			<div class="control">
+				<div class="row text-center">
+					<div class="col-md">
+						<img src="./img/killerqueen.JPG" class="border border-3 w-50 d-none d-sm-block">
+					</div>
+					<div class="col-md mt-3 h3">
+						<i onclick="playAudio(0)" class="fas fa-play" id="playbutton"></i></button>
+						
+						<i onclick="pauseAudio(0)" class="fas fa-pause" id="playbutton"></i>
+					</div>
+					<div class="col-md info mt-3 h3">Queen - Killer Queen
+					</div>
+					<div class="col-md mt-3 h3">
+						<div>
+							<span id="currentAudioTime"></span> : <span id="totalAudioDuration"></span>
+						</div>
 					</div>
 				</div>
-				<div class="col-md">
-					<div id="tracktime">00/00</div>
+			</div>
+	</div>
+<!-- Music player 2 -->
+	<div class="container-md border rounded">
+		<audio
+		src="./audio/Queen – Bohemian Rhapsody (Official Video Remastered) (64 kbps).mp3" class="audio" id="audio1" ontimeupdate="update_time(this.currentTime, this.duration, 1);">
+		</audio>
+			<div class="control">
+				<div class="row text-center">
+					<div class="col-md">
+						<img src="./img/bohemianrhapsody.jpg" class="border border-3 w-50 d-none d-sm-block">
+					</div>
+					<div class="col-md mt-3 h3">
+						<i onclick="playAudio(1)" class="fas fa-play" id="playbutton"></i></button>
+						
+						<i onclick="pauseAudio(1)" class="fas fa-pause" id="playbutton"></i>
+					</div>
+					<div class="col-md info mt-3 h3">Queen - Bohemian Rhapsody
+					</div>
+					<div class="col-md mt-3 h3">
+						<div>
+							<span id="currentAudioTime1"></span> : <span id="totalAudioDuration1"></span>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+	</div>
+<!-- Music player 3 -->
+	<div class="container-md border rounded">
+		<audio
+		src="./audio/Queen - Don't Stop Me Now (Official Video) (64 kbps).mp3" class="audio" id="audio2" ontimeupdate="update_time(this.currentTime, this.duration, 2);">
+		</audio>
+			<div class="control">
+				<div class="row text-center justify-content-md-center">
+					<div class="col-md">
+						<img src="./img/doodle_Freddie.jpg" class="border border-3 w-50 d-none d-sm-block">
+					</div>
+					<div class="col-md mt-3 h3">
+						<i onclick="playAudio(2)" class="fas fa-play" id="playbutton"></i></button>
+						
+						<i onclick="pauseAudio(2)" class="fas fa-pause" id="playbutton"></i>
+					</div>
+					<div class="col-md info mt-3 h3">Queen - Don't stop me now
+					</div>
+					<div class="col-md mt-3 h3">
+						<div>
+							<span id="currentAudioTime2"></span> : <span id="totalAudioDuration2"></span>
+						</div>
+					</div>
+				</div>
+			</div>
 	</div>
 </section>
 <!-- ALBUMS -->
 <section class="p-5 bg-dark">
 	<div class="container">
 		<div class="row text-center">
+			<h1 class="text-light mb-5">Some <span class="text-danger"><i>great</i></span> albums</h1>
 			<div class="col-md">
 				<div class="card bg-dark text-light border border-3">
 					<div class="card-body text-center">
