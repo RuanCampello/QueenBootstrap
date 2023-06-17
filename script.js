@@ -14,12 +14,18 @@ var audio2 = document.getElementById("audio2");
 function playAudio(track) {
 	if(track == 0){
 		audio.play();
+		audio1.pause();
+		audio2.pause();
 	}
 	else if(track == 1){
 		audio1.play();
+		audio.pause();
+		audio2.pause();
 	}
 	else if(track == 2){
 		audio2.play();
+		audio1.pause();
+		audio.pause();
 	}
 }
 function pauseAudio(track) {
